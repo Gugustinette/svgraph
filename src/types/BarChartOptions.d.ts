@@ -1,16 +1,13 @@
-export interface BarChartOptions {
-	width: number;
-	height: number;
-	margin: { top: number; right: number; bottom: number; left: number };
+import type { ChartOptions, ResolvedChartOptions } from "./ChartOptions";
+
+export interface BarChartOptions extends ChartOptions {
+	barPadding?: number;
+	barGroupPadding?: number;
+	maxValue?: number;
+}
+
+export interface ResolvedBarChartOptions extends ResolvedChartOptions {
 	barPadding: number;
 	barGroupPadding: number;
-	colors: string[];
-	fontFamily: string;
-	fontSize: number;
-	title: string;
-	yAxisLabel: string;
-	legendTitle: string;
-	showValues: boolean;
-	formatValue: (value: number) => string;
-	decimalPlaces: number;
+	maxValue: number;
 }

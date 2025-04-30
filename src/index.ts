@@ -1,1 +1,1 @@
-export * from "./generateBarChart";
+export * from "./bar-chart";
