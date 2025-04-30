@@ -1,0 +1,58 @@
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" fill="white" />
+  <text x="400" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">Bar Chart</text>
+  <g transform="translate(80, 60)">
+    <line x1="0" y1="380" x2="600" y2="380" stroke="#ddd" stroke-width="1" />
+    <text x="-10" y="380" font-family="Arial, sans-serif" font-size="12" text-anchor="end" dominant-baseline="middle">0</text>
+    <line x1="0" y1="342" x2="600" y2="342" stroke="#ddd" stroke-width="1" />
+    <text x="-10" y="342" font-family="Arial, sans-serif" font-size="12" text-anchor="end" dominant-baseline="middle">20</text>
+    <line x1="0" y1="304" x2="600" y2="304" stroke="#ddd" stroke-width="1" />
+    <text x="-10" y="304" font-family="Arial, sans-serif" font-size="12" text-anchor="end" dominant-baseline="middle">40</text>
+    <line x1="0" y1="266" x2="600" y2="266" stroke="#ddd" stroke-width="1" />
+    <text x="-10" y="266" font-family="Arial, sans-serif" font-size="12" text-anchor="end" dominant-baseline="middle">60</text>
+    <line x1="0" y1="228" x2="600" y2="228" stroke="#ddd" stroke-width="1" />
+    <text x="-10" y="228" font-family="Arial, sans-serif" font-size="12" text-anchor="end" dominant-baseline="middle">80</text>
+    <line x1="0" y1="190" x2="600" y2="190" stroke="#ddd" stroke-width="1" />
+    <text x="-10" y="190" font-family="Arial, sans-serif" font-size="12" text-anchor="end" dominant-baseline="middle">100</text>
+    <line x1="0" y1="152" x2="600" y2="152" stroke="#ddd" stroke-width="1" />
+    <text x="-10" y="152" font-family="Arial, sans-serif" font-size="12" text-anchor="end" dominant-baseline="middle">120</text>
+    <line x1="0" y1="114" x2="600" y2="114" stroke="#ddd" stroke-width="1" />
+    <text x="-10" y="114" font-family="Arial, sans-serif" font-size="12" text-anchor="end" dominant-baseline="middle">140</text>
+    <line x1="0" y1="76" x2="600" y2="76" stroke="#ddd" stroke-width="1" />
+    <text x="-10" y="76" font-family="Arial, sans-serif" font-size="12" text-anchor="end" dominant-baseline="middle">160</text>
+    <line x1="0" y1="38" x2="600" y2="38" stroke="#ddd" stroke-width="1" />
+    <text x="-10" y="38" font-family="Arial, sans-serif" font-size="12" text-anchor="end" dominant-baseline="middle">180</text>
+    <line x1="0" y1="0" x2="600" y2="0" stroke="#ddd" stroke-width="1" />
+    <text x="-10" y="0" font-family="Arial, sans-serif" font-size="12" text-anchor="end" dominant-baseline="middle">200</text>
+    <text x="-40" y="190" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" transform="rotate(-90, -40, 190)">Value</text>
+    <line x1="0" y1="380" x2="600" y2="380" stroke="#000" stroke-width="1" />
+    <text x="100" y="410" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">groupA</text>
+    <rect x="40" y="190" width="32" height="190" fill="#4285F4" />
+    <text x="56" y="285" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#fff" dominant-baseline="middle">100</text>
+    <rect x="80" y="0" width="32" height="380" fill="#34A853" />
+    <text x="96" y="190" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#fff" dominant-baseline="middle">200</text>
+    <rect x="120" y="95" width="32" height="285" fill="#FBBC05" />
+    <text x="136" y="237.5" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#fff" dominant-baseline="middle">150</text>
+    <text x="300" y="410" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">groupB</text>
+    <rect x="240" y="152" width="32" height="228" fill="#4285F4" />
+    <text x="256" y="266" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#fff" dominant-baseline="middle">120</text>
+    <rect x="280" y="38" width="32" height="342" fill="#34A853" />
+    <text x="296" y="209" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#fff" dominant-baseline="middle">180</text>
+    <rect x="320" y="76" width="32" height="304" fill="#FBBC05" />
+    <text x="336" y="228" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#fff" dominant-baseline="middle">160</text>
+    <text x="500" y="410" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">groupC</text>
+    <rect x="440" y="133" width="32" height="247" fill="#4285F4" />
+    <text x="456" y="256.5" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#fff" dominant-baseline="middle">130</text>
+    <rect x="480" y="19" width="32" height="361" fill="#34A853" />
+    <text x="496" y="199.5" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#fff" dominant-baseline="middle">190</text>
+    <rect x="520" y="57" width="32" height="323" fill="#FBBC05" />
+    <text x="536" y="218.5" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#fff" dominant-baseline="middle">170</text>
+    <text x="610" y="0" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="start">Items:</text>
+    <rect x="610" y="25" width="15" height="15" fill="#4285F4" />
+    <text x="635" y="37" font-family="Arial, sans-serif" font-size="12" text-anchor="start">item1</text>
+    <rect x="610" y="50" width="15" height="15" fill="#34A853" />
+    <text x="635" y="62" font-family="Arial, sans-serif" font-size="12" text-anchor="start">item2</text>
+    <rect x="610" y="75" width="15" height="15" fill="#FBBC05" />
+    <text x="635" y="87" font-family="Arial, sans-serif" font-size="12" text-anchor="start">item3</text>
+  </g>
+</svg>

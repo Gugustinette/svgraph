@@ -5,6 +5,7 @@
   "main": "dist/index.mjs",
   "scripts": {
     "build": "tsdown",
+    "playground": "tsx playground/playground.ts",
     "test": "vitest --run",
     "test:watch": "vitest",
     "format": "biome format --write src",
@@ -15,7 +16,9 @@
   "license": "MIT",
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
+    "@types/node": "^22.15.3",
     "tsdown": "^0.10.2",
+    "tsx": "^4.19.4",
     "vitest": "^3.1.2"
   }
 }
