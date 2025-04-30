@@ -1,0 +1,21 @@
+{
+  "name": "svgraph",
+  "version": "0.0.1",
+  "description": "An easy way to generate charts as SVG",
+  "main": "dist/index.mjs",
+  "scripts": {
+    "build": "tsdown",
+    "test": "vitest --run",
+    "test:watch": "vitest",
+    "format": "biome format --write src",
+    "lint": "biome lint --write src"
+  },
+  "keywords": [],
+  "author": "Augustin Mercier 'Gugustinette'",
+  "license": "MIT",
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "tsdown": "^0.10.2",
+    "vitest": "^3.1.2"
+  }
+}
