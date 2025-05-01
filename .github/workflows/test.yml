@@ -17,6 +17,7 @@ on:
       - "package-lock.json"
       - "src/**"
       - "test/**"
+  workflow_dispatch:
 
 jobs:
   test:
