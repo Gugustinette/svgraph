@@ -1,4 +1,9 @@
-import { generateBarChart, generateLineChart } from "../src";
+import {
+	generateBarChart,
+	generateLineChart,
+	generatePieChart,
+	generateDoughnutChart,
+} from "../src";
 import fs from "node:fs";
 
 /**
@@ -49,3 +54,34 @@ const svgLineChart = generateLineChart(lineMetrics, {
 	curveSmoothing: true,
 });
 fs.writeFileSync("playground/svgLineChart.svg", svgLineChart, "utf-8");
+
+/**
+ * Pie chart
+ */
+const pieMetrics = {
+	segment1: 30,
+	segment2: 15,
+	segment3: 25,
+	segment4: 20,
+	segment5: 10,
+};
+
+const svgPieChart = generatePieChart(pieMetrics);
+fs.writeFileSync("playground/svgPieChart.svg", svgPieChart, "utf-8");
+
+/**
+ * Doughnut chart
+ */
+const doughnutMetrics = {
+	segment1: 30,
+	segment2: 15,
+	segment3: 25,
+	segment4: 20,
+	segment5: 10,
+};
+
+const svgDoughnutChart = generateDoughnutChart(doughnutMetrics, {
+	title: "Doughnut Chart Example",
+	showPercentages: true,
+});
+fs.writeFileSync("playground/svgDoughnutChart.svg", svgDoughnutChart, "utf-8");

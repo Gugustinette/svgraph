@@ -1,0 +1,61 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`generatePieChart > should generate a doughnut chart SVG 1`] = `
+"<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" fill="white" />
+  <text x="400" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">Chart</text>
+  <g transform="translate(80, 60)">
+    <path d="M 300 0 A 190 190 0 0 1 480.70073809607914 248.71322893124 L 408.4204428576475 225.227937358744 A 114 114 0 0 0 300 76 Z" fill="#4285F4" stroke="white" stroke-width="1" />
+    <text x="422.970583144992" y="100.65664165154408" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#fff" dominant-baseline="middle">30%</text>
+    <path d="M 480.70073809607914 248.71322893124 A 190 190 0 0 1 358.71322893124 370.70073809607914 L 335.227937358744 298.4204428576475 A 114 114 0 0 0 408.4204428576475 225.227937358744 Z" fill="#34A853" stroke="white" stroke-width="1" />
+    <text x="407.48023074035524" y="297.4802307403552" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#fff" dominant-baseline="middle">15%</text>
+    <path d="M 358.71322893124 370.70073809607914 A 190 190 0 0 1 119.29926190392084 248.71322893124002 L 191.57955714235248 225.22793735874401 A 114 114 0 0 0 335.227937358744 298.4204428576475 Z" fill="#FBBC05" stroke="white" stroke-width="1" />
+    <text x="230.9934440395889" y="325.4329916766319" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#fff" dominant-baseline="middle">25%</text>
+    <path d="M 119.29926190392084 248.71322893124002 A 190 190 0 0 1 188.3208020644301 36.286771068760004 L 232.99248123865806 97.772062641256 A 114 114 0 0 0 191.57955714235248 225.22793735874401 Z" fill="#EA4335" stroke="white" stroke-width="1" />
+    <text x="155.43940952313667" y="143.02941685500795" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#fff" dominant-baseline="middle">20%</text>
+    <path d="M 188.3208020644301 36.286771068760004 A 190 190 0 0 1 299.99999999999994 0 L 300 76 A 114 114 0 0 0 232.99248123865806 97.772062641256 Z" fill="#8AB4F8" stroke="white" stroke-width="1" />
+    <text x="253.02941685500798" y="45.439409523136675" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#fff" dominant-baseline="middle">10%</text>
+    <text x="610" y="0" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="start">Items:</text>
+    <rect x="610" y="25" width="15" height="15" fill="#4285F4" />
+    <text x="635" y="37" font-family="Arial, sans-serif" font-size="12" text-anchor="start">segment1</text>
+    <rect x="610" y="50" width="15" height="15" fill="#34A853" />
+    <text x="635" y="62" font-family="Arial, sans-serif" font-size="12" text-anchor="start">segment2</text>
+    <rect x="610" y="75" width="15" height="15" fill="#FBBC05" />
+    <text x="635" y="87" font-family="Arial, sans-serif" font-size="12" text-anchor="start">segment3</text>
+    <rect x="610" y="100" width="15" height="15" fill="#EA4335" />
+    <text x="635" y="112" font-family="Arial, sans-serif" font-size="12" text-anchor="start">segment4</text>
+    <rect x="610" y="125" width="15" height="15" fill="#8AB4F8" />
+    <text x="635" y="137" font-family="Arial, sans-serif" font-size="12" text-anchor="start">segment5</text>
+  </g>
+</svg>"
+`;
+
+exports[`generatePieChart > should generate a pie chart SVG with default options 1`] = `
+"<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" fill="white" />
+  <text x="400" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">Chart</text>
+  <g transform="translate(80, 60)">
+    <path d="M 300 190 L 300 0 A 190 190 0 0 1 480.70073809607914 248.71322893124 Z" fill="#4285F4" stroke="white" stroke-width="1" />
+    <text x="402.9878633839308" y="115.17493738316816" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#fff" dominant-baseline="middle">30%</text>
+    <path d="M 300 190 L 480.70073809607914 248.71322893124 A 190 190 0 0 1 358.71322893124 370.70073809607914 Z" fill="#34A853" stroke="white" stroke-width="1" />
+    <text x="390.0146932450475" y="280.0146932450475" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#fff" dominant-baseline="middle">15%</text>
+    <path d="M 300 190 L 358.71322893124 370.70073809607914 A 190 190 0 0 1 119.29926190392084 248.71322893124002 Z" fill="#FBBC05" stroke="white" stroke-width="1" />
+    <text x="242.2070093831557" y="303.4251305291792" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#fff" dominant-baseline="middle">25%</text>
+    <path d="M 300 190 L 119.29926190392084 248.71322893124002 A 190 190 0 0 1 188.3208020644301 36.286771068760004 Z" fill="#EA4335" stroke="white" stroke-width="1" />
+    <text x="178.93050547562694" y="150.66213661606915" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#fff" dominant-baseline="middle">20%</text>
+    <path d="M 300 190 L 188.3208020644301 36.286771068760004 A 190 190 0 0 1 299.99999999999994 0 Z" fill="#8AB4F8" stroke="white" stroke-width="1" />
+    <text x="260.6621366160692" y="68.93050547562694" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#fff" dominant-baseline="middle">10%</text>
+    <text x="610" y="0" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="start">Items:</text>
+    <rect x="610" y="25" width="15" height="15" fill="#4285F4" />
+    <text x="635" y="37" font-family="Arial, sans-serif" font-size="12" text-anchor="start">segment1</text>
+    <rect x="610" y="50" width="15" height="15" fill="#34A853" />
+    <text x="635" y="62" font-family="Arial, sans-serif" font-size="12" text-anchor="start">segment2</text>
+    <rect x="610" y="75" width="15" height="15" fill="#FBBC05" />
+    <text x="635" y="87" font-family="Arial, sans-serif" font-size="12" text-anchor="start">segment3</text>
+    <rect x="610" y="100" width="15" height="15" fill="#EA4335" />
+    <text x="635" y="112" font-family="Arial, sans-serif" font-size="12" text-anchor="start">segment4</text>
+    <rect x="610" y="125" width="15" height="15" fill="#8AB4F8" />
+    <text x="635" y="137" font-family="Arial, sans-serif" font-size="12" text-anchor="start">segment5</text>
+  </g>
+</svg>"
+`;
