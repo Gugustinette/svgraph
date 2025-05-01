@@ -1,6 +1,6 @@
 <svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
   <rect width="800" height="500" fill="white" />
-  <text x="400" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">Bar Chart</text>
+  <text x="400" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">Chart</text>
   <g transform="translate(80, 60)">
     <line x1="0" y1="380" x2="600" y2="380" stroke="#ddd" stroke-width="1" />
     <text x="-10" y="380" font-family="Arial, sans-serif" font-size="12" text-anchor="end" dominant-baseline="middle">0</text>

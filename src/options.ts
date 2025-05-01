@@ -19,7 +19,7 @@ export const DEFAULT_CHART_OPTIONS: ChartOptions = {
 	],
 	fontFamily: "Arial, sans-serif",
 	fontSize: 12,
-	title: "Bar Chart",
+	title: "Chart",
 	yAxisLabel: "Value",
 	legendTitle: "Items:",
 	showValues: true,
