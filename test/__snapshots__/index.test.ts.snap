@@ -60,3 +60,53 @@ exports[`generateBarChart > should generate a bar chart SVG with default options
   </g>
 </svg>"
 `;
+
+exports[`generateLineChart > should generate a line chart SVG with default options 1`] = `
+"<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" fill="white" />
+  <text x="400" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">Chart</text>
+  <g transform="translate(80, 60)">
+    <line x1="0" y1="380" x2="600" y2="380" stroke="#ddd" stroke-width="1" />
+    <text x="-10" y="380" font-family="Arial, sans-serif" font-size="12" text-anchor="end" dominant-baseline="middle">0</text>
+    <line x1="0" y1="342" x2="600" y2="342" stroke="#ddd" stroke-width="1" />
+    <text x="-10" y="342" font-family="Arial, sans-serif" font-size="12" text-anchor="end" dominant-baseline="middle">4</text>
+    <line x1="0" y1="304" x2="600" y2="304" stroke="#ddd" stroke-width="1" />
+    <text x="-10" y="304" font-family="Arial, sans-serif" font-size="12" text-anchor="end" dominant-baseline="middle">8</text>
+    <line x1="0" y1="266" x2="600" y2="266" stroke="#ddd" stroke-width="1" />
+    <text x="-10" y="266" font-family="Arial, sans-serif" font-size="12" text-anchor="end" dominant-baseline="middle">12</text>
+    <line x1="0" y1="228" x2="600" y2="228" stroke="#ddd" stroke-width="1" />
+    <text x="-10" y="228" font-family="Arial, sans-serif" font-size="12" text-anchor="end" dominant-baseline="middle">16</text>
+    <line x1="0" y1="190" x2="600" y2="190" stroke="#ddd" stroke-width="1" />
+    <text x="-10" y="190" font-family="Arial, sans-serif" font-size="12" text-anchor="end" dominant-baseline="middle">20</text>
+    <line x1="0" y1="152" x2="600" y2="152" stroke="#ddd" stroke-width="1" />
+    <text x="-10" y="152" font-family="Arial, sans-serif" font-size="12" text-anchor="end" dominant-baseline="middle">24</text>
+    <line x1="0" y1="114" x2="600" y2="114" stroke="#ddd" stroke-width="1" />
+    <text x="-10" y="114" font-family="Arial, sans-serif" font-size="12" text-anchor="end" dominant-baseline="middle">28</text>
+    <line x1="0" y1="76" x2="600" y2="76" stroke="#ddd" stroke-width="1" />
+    <text x="-10" y="76" font-family="Arial, sans-serif" font-size="12" text-anchor="end" dominant-baseline="middle">32</text>
+    <line x1="0" y1="38" x2="600" y2="38" stroke="#ddd" stroke-width="1" />
+    <text x="-10" y="38" font-family="Arial, sans-serif" font-size="12" text-anchor="end" dominant-baseline="middle">36</text>
+    <line x1="0" y1="0" x2="600" y2="0" stroke="#ddd" stroke-width="1" />
+    <text x="-10" y="0" font-family="Arial, sans-serif" font-size="12" text-anchor="end" dominant-baseline="middle">40</text>
+    <text x="-40" y="190" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" transform="rotate(-90, -40, 190)">Value</text>
+    <line x1="0" y1="380" x2="600" y2="380" stroke="#000" stroke-width="1" />
+    <path d="M 0 325.7142857142857 L 150 162.85714285714286 L 300 271.42857142857144 L 450 108.57142857142856 L 600 195.42857142857142" fill="none" stroke="#4285F4" stroke-width="2" />
+    <circle cx="0" cy="325.7142857142857" r="4" fill="#4285F4" stroke="white" stroke-width="1" />
+    <circle cx="150" cy="162.85714285714286" r="4" fill="#4285F4" stroke="white" stroke-width="1" />
+    <circle cx="300" cy="271.42857142857144" r="4" fill="#4285F4" stroke="white" stroke-width="1" />
+    <circle cx="450" cy="108.57142857142856" r="4" fill="#4285F4" stroke="white" stroke-width="1" />
+    <circle cx="600" cy="195.42857142857142" r="4" fill="#4285F4" stroke="white" stroke-width="1" />
+    <path d="M 0 380 L 150 271.42857142857144 L 300 162.85714285714286 L 450 217.14285714285714 L 600 54.28571428571428" fill="none" stroke="#34A853" stroke-width="2" />
+    <circle cx="0" cy="380" r="4" fill="#34A853" stroke="white" stroke-width="1" />
+    <circle cx="150" cy="271.42857142857144" r="4" fill="#34A853" stroke="white" stroke-width="1" />
+    <circle cx="300" cy="162.85714285714286" r="4" fill="#34A853" stroke="white" stroke-width="1" />
+    <circle cx="450" cy="217.14285714285714" r="4" fill="#34A853" stroke="white" stroke-width="1" />
+    <circle cx="600" cy="54.28571428571428" r="4" fill="#34A853" stroke="white" stroke-width="1" />
+    <text x="610" y="0" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="start">Items:</text>
+    <rect x="610" y="25" width="15" height="15" fill="#4285F4" />
+    <text x="635" y="37" font-family="Arial, sans-serif" font-size="12" text-anchor="start">groupA</text>
+    <rect x="610" y="50" width="15" height="15" fill="#34A853" />
+    <text x="635" y="62" font-family="Arial, sans-serif" font-size="12" text-anchor="start">groupB</text>
+  </g>
+</svg>"
+`;
