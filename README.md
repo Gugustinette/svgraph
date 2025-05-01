@@ -1,5 +1,9 @@
 # svgraph
 
+[![npm version][npm-version-src]][npm-version-href]
+[![npm downloads][npm-downloads-src]][npm-downloads-href]
+[![License][license-src]][license-href]
+
 An easy way to generate charts as SVG
 
 ## Installation
@@ -34,3 +38,12 @@ npm run test
 npm run format
 npm run lint
 ```
+
+<!-- Badges -->
+
+[npm-version-src]: https://img.shields.io/npm/v/svgraph/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
+[npm-version-href]: https://npmjs.com/package/svgraph
+[npm-downloads-src]: https://img.shields.io/npm/dm/svgraph.svg?style=flat&colorA=18181B&colorB=28CF8D
+[npm-downloads-href]: https://npmjs.com/package/svgraph
+[license-src]: https://img.shields.io/npm/l/svgraph.svg?style=flat&colorA=18181B&colorB=28CF8D
+[license-href]: https://npmjs.com/package/svgraph
