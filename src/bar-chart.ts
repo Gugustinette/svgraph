@@ -1,4 +1,4 @@
-import { DEFAULT_CHART_OPTIONS, resolveChartOptions } from "./options";
+import { DEFAULT_CHART_OPTIONS } from "./options";
 import type { BarChartMetrics } from "./types/BarChartMetrics";
 import type {
 	BarChartOptions,
@@ -6,11 +6,10 @@ import type {
 } from "./types/BarChartOptions";
 import {
 	getItemNames,
-	getMaxValue,
+	resolveBarChartOptions,
 	validateBarChartMetrics,
 } from "./utils/BarChartUtil";
 import { createLegend, createTitle, createYAxis } from "./utils/ChartUtil";
-import { roundMaxValue } from "./utils/MathUtil";
 
 /**
  * Default bar chart options
@@ -21,28 +20,11 @@ export const DEFAULT_BAR_CHART_OPTIONS: BarChartOptions = {
 	barGroupPadding: 0.4,
 };
 
-export const resolveBarChartOptions = (
-	metrics: BarChartMetrics,
-	options: BarChartOptions,
-): ResolvedBarChartOptions => {
-	const resolvedOptions = {
-		...DEFAULT_BAR_CHART_OPTIONS,
-		...resolveChartOptions<BarChartOptions>(options),
-	};
-
-	// Validate and set default values
-	resolvedOptions.barPadding =
-		options.barPadding ?? DEFAULT_BAR_CHART_OPTIONS.barPadding;
-	resolvedOptions.barGroupPadding =
-		options.barGroupPadding ?? DEFAULT_BAR_CHART_OPTIONS.barGroupPadding;
-	resolvedOptions.maxValue = roundMaxValue(getMaxValue(metrics));
-
-	// Return and cast to the resolved type
-	return resolvedOptions as ResolvedBarChartOptions;
-};
-
 /**
- * Creates SVG bars
+ * Creates the SVG bars for the bar chart
+ * @param metrics - The data for the bar chart
+ * @param config - Resolved bar chart options
+ * @returns SVG string for the bars
  */
 const createBars = (
 	metrics: BarChartMetrics,
@@ -125,7 +107,7 @@ export const generateBarChart = (
 	validateBarChartMetrics(metrics);
 
 	// Resolve options
-	const config = resolveBarChartOptions(metrics, options);
+	const config = resolveBarChartOptions(options, metrics);
 
 	// Create the SVG content
 	let svg = `<svg width="${config.width}" height="${config.height}" xmlns="http://www.w3.org/2000/svg">\n`;
@@ -149,6 +131,7 @@ export const generateBarChart = (
 	const items = getItemNames(metrics);
 	svg += createLegend(config, items);
 
+	// Close the group and SVG
 	svg += "  </g>\n</svg>";
 
 	return svg;
