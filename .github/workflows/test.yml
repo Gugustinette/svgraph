@@ -28,7 +28,7 @@ jobs:
         with:
           node-version: 22
           registry-url: https://registry.npmjs.org/
-      # Remove package-lock.json if it exists
+      # Remove package-lock.json because native bindings 💀
       - name: Remove package-lock.json
         run: |
           if [ -f package-lock.json ]; then
