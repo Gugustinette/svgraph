@@ -9,7 +9,7 @@ import {
 	getMaxValue,
 	validateBarChartMetrics,
 } from "./utils/BarChartUtil";
-import { createTitleElement } from "./utils/ChartUtil";
+import { createLegend, createTitle, createYAxis } from "./utils/ChartUtil";
 import { roundMaxValue } from "./utils/MathUtil";
 
 /**
@@ -42,55 +42,9 @@ export const resolveBarChartOptions = (
 };
 
 /**
- * Creates SVG y-axis elements
- */
-const createYAxis = (config: ResolvedBarChartOptions): string => {
-	// Initialize SVG string
-	let svg = "";
-
-	// Number of steps for the y-axis
-	const yAxisSteps = 10;
-
-	// Pre-compute values
-	const { width, height, margin } = config;
-	const chartWidth = width - margin.left - margin.right;
-	const chartHeight = height - margin.top - margin.bottom;
-
-	for (let i = 0; i <= yAxisSteps; i++) {
-		const y = chartHeight - (i / yAxisSteps) * chartHeight;
-		const value = (i / yAxisSteps) * config.maxValue;
-		const formattedValue = value.toFixed(config.decimalPlaces);
-
-		// Grid line
-		svg += `    <line x1="0" y1="${y}" x2="${chartWidth}" y2="${y}" stroke="#ddd" stroke-width="1" />\n`;
-
-		// Y-axis label
-		svg += `    <text x="-10" y="${y}" font-family="${
-			config.fontFamily
-		}" font-size="${
-			config.fontSize
-		}" text-anchor="end" dominant-baseline="middle">${formattedValue}</text>\n`;
-	}
-
-	// Y-axis title
-	svg += `    <text x="-${config.margin.left / 2}" y="${
-		chartHeight / 2
-	}" font-family="${config.fontFamily}" font-size="${
-		config.fontSize
-	}" text-anchor="middle" transform="rotate(-90, -${config.margin.left / 2}, ${
-		chartHeight / 2
-	})">${config.yAxisLabel}</text>\n`;
-
-	// X-axis line
-	svg += `    <line x1="0" y1="${chartHeight}" x2="${chartWidth}" y2="${chartHeight}" stroke="#000" stroke-width="1" />\n`;
-
-	return svg;
-};
-
-/**
  * Creates SVG bars
  */
-const generateBars = (
+const createBars = (
 	metrics: BarChartMetrics,
 	config: ResolvedBarChartOptions,
 ): string => {
@@ -158,51 +112,6 @@ const generateBars = (
 };
 
 /**
- * Creates SVG legend elements
- */
-const createLegend = (
-	metrics: BarChartMetrics,
-	config: ResolvedBarChartOptions,
-): string => {
-	// Initialize SVG string
-	let svg = "";
-
-	// Pre-compute values
-	const itemsArray = getItemNames(metrics);
-	const chartWidth = config.width - config.margin.left - config.margin.right;
-	const legendX = chartWidth + 10;
-	let legendY = 0;
-
-	// Legend title
-	svg += `    <text x="${legendX}" y="${legendY}" font-family="${
-		config.fontFamily
-	}" font-size="${config.fontSize}" font-weight="bold" text-anchor="start">${
-		config.legendTitle
-	}</text>\n`;
-
-	legendY += 25;
-
-	itemsArray.forEach((item, index) => {
-		const y = legendY + index * 25;
-		const colorIndex = index % config.colors.length;
-
-		// Legend color box
-		svg += `    <rect x="${legendX}" y="${y}" width="15" height="15" fill="${
-			config.colors[colorIndex]
-		}" />\n`;
-
-		// Legend text
-		svg += `    <text x="${legendX + 25}" y="${
-			y + 12
-		}" font-family="${config.fontFamily}" font-size="${
-			config.fontSize
-		}" text-anchor="start">${item}</text>\n`;
-	});
-
-	return svg;
-};
-
-/**
  * Generates an SVG bar chart from given metrics
  * @param metrics - The data for the bar chart
  * @param options - Optional configuration for the chart
@@ -225,19 +134,20 @@ export const generateBarChart = (
 	svg += `  <rect width="${config.width}" height="${config.height}" fill="white" />\n`;
 
 	// Add a title
-	svg += createTitleElement(config);
+	svg += createTitle(config);
 
 	// Create a group for the chart content with a transform to account for margins
 	svg += `  <g transform="translate(${config.margin.left}, ${config.margin.top})">\n`;
 
 	// Draw the y-axis and grid lines
-	svg += createYAxis(config);
+	svg += createYAxis(config, config.maxValue);
 
 	// Draw the bars
-	svg += generateBars(metrics, config);
+	svg += createBars(metrics, config);
 
 	// Draw the legend
-	svg += createLegend(metrics, config);
+	const items = getItemNames(metrics);
+	svg += createLegend(config, items);
 
 	svg += "  </g>\n</svg>";
 
